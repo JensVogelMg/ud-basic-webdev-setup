@@ -1,7 +1,5 @@
-function hello() {
-    return "Hello, world!";
-  }
+import { getWeather } from './helfer/weatherCall';
 
-console.log("test")
-alert("test")
-console.log("doppeltest")
+const weather = getWeather('Berlin,de').then(response => response.data);
+
+console.log(weather);
